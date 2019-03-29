@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Adaptive_educational_application
@@ -12,12 +12,12 @@ namespace Adaptive_educational_application
         /// поле регистрации
         /// </summary>
         /// <returns></returns>
-        public List<Registration> Field { get; set; }
+        public Registration Registration { get; set; }
         /// <summary>
         /// предметные области
         /// </summary>
         /// <returns></returns>
-        public Subject_Areas Subject_Areas {get; set;}
+        public Subject_Areas Subject_Areas { get; set; }
         /// <summary>
         /// картинка пользователя в соответствии с его уровнем
         /// </summary>
@@ -27,16 +27,11 @@ namespace Adaptive_educational_application
         /// Текущий уровень пользователя
         /// </summary>
         /// <returns></returns>
-        public List<Curent_User_Level> Curent_User_Level { get; set; }
-        /// <summary>
-        /// Рейтинг пользователей
-        /// </summary>
-        /// <returns></returns>
-        public List<User_Rating> User_Rating { get; set; }
+        public Curent_User_Level Curent_User_Level { get; set; }
         /// <summary>
         /// Ссылки на учебники
         /// </summary>
-        public List<LinksTutorials> LinksTutorials { get; set; }
+        public LinksTutorials LinksTutorials { get; set; }
     }
 
     /// <summary>
@@ -114,21 +109,22 @@ namespace Adaptive_educational_application
         /// Уровень пользователя в предметной области "ПДД"
         /// </summary>
         public int Traffic_Laws_Level { get; set; }
-    }
-
-    /// <summary>
-    /// Рейтинг пользователей
-    /// </summary>
-    public class User_Rating
-    {
         /// <summary>
-        /// Имя пользователя
+        /// Тема "музыка"
         /// </summary>
-        public string UserName { get; set; }
+        public string Topic_Music { get; set; }
         /// <summary>
-        /// Текущий уровень пользователя
+        /// Тема "алгебра"
         /// </summary>
-        public int Curent_User_Level { get; set; }
+        public string Topic_Algebra { get; set; }
+        /// <summary>
+        /// Тема "геометрия"
+        /// </summary>
+        public string Topic_Geometry { get; set; }
+        /// <summary>
+        /// Тема "ПДД"
+        /// </summary>
+        public string Topic_Traffic_Laws { get; set; }
     }
 
     /// <summary>
@@ -139,18 +135,34 @@ namespace Adaptive_educational_application
         /// <summary>
         /// Cсылка на музыку
         /// </summary>
-        public string Tutorials_Music { get; set; }
+        public string Url_Tutorials_Music { get; set; }
+        /// <summary>
+        /// Тема музыка
+        /// </summary>
+        public string Topic_Tutorials_Music { get; set; }
         /// <summary>
         /// Ссылка наа алгебру
         /// </summary>
-        public string Tutorials_Algebra { get; set; }
+        public string Url_Tutorials_Algebra { get; set; }
+        /// <summary>
+        /// Тема Алгебра
+        /// </summary>
+        public string Topic_Tutorials_Algebre { get; set; }
         /// <summary>
         /// Ссылка на геометрию
         /// </summary>
-        public string Tutorials_Geometry { get; set; }
+        public string Url_Tutorials_Geometry { get; set; }
+        /// <summary>
+        /// Тема Геометрия
+        /// </summary>
+        public string Topic_Tutorials_Geometry { get; set; }
         /// <summary>
         /// Ссылка на ПДД
         /// </summary>
-        public string Tutorials_Traffic_Laws { get; set; }
+        public string Url_Tutorials_Traffic_Laws { get; set; }
+        /// <summary>
+        /// Тема ПДД
+        /// </summary>
+        public string Topic_Tutorials_Traffic_Laws { get; set; }
     }
 }
